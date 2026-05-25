@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="256" y1="256" x2="418" y2="148" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="white" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.03"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur in="SourceGraphic" stdDeviation="14"/></filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+
+  <circle cx="256" cy="256" r="186" fill="white" opacity="0.1"/>
+
+  <!-- 同心环 -->
+  <circle cx="256" cy="256" r="186" fill="none" stroke="white" stroke-width="3.5" opacity="0.3"/>
+  <circle cx="256" cy="256" r="140" fill="none" stroke="white" stroke-width="2.5" opacity="0.2"/>
+  <circle cx="256" cy="256" r="94" fill="none" stroke="white" stroke-width="2.5" opacity="0.22"/>
+  <circle cx="256" cy="256" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.14"/>
+
+  <line x1="70" y1="256" x2="442" y2="256" stroke="white" stroke-width="1.2" opacity="0.1"/>
+  <line x1="256" y1="70" x2="256" y2="442" stroke="white" stroke-width="1.2" opacity="0.1"/>
+
+  <!-- 扫描扇区 -->
+  <path d="M256,256 L256,70 A186,186 0 0,1 418,148 Z" fill="url(#sweep)"/>
+
+  <!-- 扫描线 - 5px -->
+  <line x1="256" y1="256" x2="418" y2="148" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.68"/>
+
+  <!-- 主目标 -->
+  <circle cx="346" cy="112" r="18" fill="white" opacity="0.1" filter="url(#glow)"/>
+  <circle cx="346" cy="112" r="12" fill="none" stroke="white" stroke-width="2.5" opacity="0.65"/>
+  <circle cx="346" cy="112" r="5" fill="white" opacity="0.95"/>
+
+  <!-- 次目标 -->
+  <circle cx="372" cy="296" r="8" fill="white" opacity="0.55"/>
+  <circle cx="372" cy="296" r="3.5" fill="url(#bg)" opacity="0.4"/>
+
+  <!-- 弱目标 -->
+  <circle cx="156" cy="148" r="5.5" fill="white" opacity="0.3"/>
+  <circle cx="156" cy="148" r="2.5" fill="url(#bg)" opacity="0.2"/>
+
+  <!-- 中心柔光 -->
+  <circle cx="256" cy="256" r="48" fill="white" opacity="0.08" filter="url(#glow)"/>
+
+  <!-- 闪电 - 比 B1 小 ~15% -->
+  <path d="M284,128 L216,268 L250,268 L200,380 L308,244 L272,244 L322,128Z" fill="white" opacity="0.95"/>
+</svg>

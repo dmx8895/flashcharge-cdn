@@ -1,0 +1,20 @@
+{
+  "name": "闪充伴侣 - 比亚迪闪充站",
+  "short_name": "闪充伴侣",
+  "description": "比亚迪闪充站地图与充电站查询",
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0EA5E9",
+  "background_color": "#0369A1",
+  "display": "standalone"
+}
